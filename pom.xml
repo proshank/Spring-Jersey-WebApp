@@ -14,9 +14,25 @@
 		<junit.version>4.11</junit.version>
 		<logback.version>1.0.13</logback.version>
 		<jcl-over-slf4j.version>1.7.5</jcl-over-slf4j.version>
+		<hibernate-core-version></hibernate-core-version>
 	</properties>
-
 	<dependencies>
+		
+		<!-- Hibernate -->
+		<dependency>
+			<groupId>org.hibernate</groupId>
+			<artifactId>hibernate-core</artifactId>
+			<version>4.3.8.Final</version>
+		</dependency>
+
+		<!-- for JPA, use hibernate-entitymanager instead of hibernate-core -->
+		<dependency>
+			<groupId>org.hibernate</groupId>
+			<artifactId>hibernate-entitymanager</artifactId>
+			<version>4.3.8.Final</version>
+		</dependency>
+		
+		<!-- Junit -->
 		<dependency>
 			<groupId>junit</groupId>
 			<artifactId>junit</artifactId>
@@ -29,6 +45,13 @@
 			<artifactId>jersey-server</artifactId>
 			<version>1.8</version>
 		</dependency>
+
+		<dependency>
+			<groupId>com.sun.jersey</groupId>
+			<artifactId>jersey-json</artifactId>
+			<version>1.8</version>
+		</dependency>
+
 		<!-- Logging framewor -->
 		<dependency>
 			<groupId>org.slf4j</groupId>
