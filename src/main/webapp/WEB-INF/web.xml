@@ -24,7 +24,7 @@
 			<param-name>
 				com.sun.jersey.config.property.packages
 			</param-name>
-			<param-value>com.proshank.service.employee.resources</param-value>
+			<param-value>com.proshank.employee.resources</param-value>
 		</init-param>
 		<init-param>
 			<param-name>com.sun.jersey.api.json.POJOMappingFeature</param-name>

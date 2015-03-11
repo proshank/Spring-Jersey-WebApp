@@ -1,12 +1,11 @@
 package com.proshank.employee.data;
 
-
-
 public class Employee {
 	private String firstName;
 	private String lastName;
 	private String cec;
 	private String password;
+	private int id;
 
 	public String getFirstName() {
 		return firstName;
@@ -44,6 +43,14 @@ public class Employee {
 		this.lastName = "Roshankhede";
 		this.cec = "proshank";
 		this.password = "proshank";
+	}
+
+	public int getId() {
+		return id;
+	}
+
+	public void setId(int id) {
+		this.id = id;
 	}
 
 }
