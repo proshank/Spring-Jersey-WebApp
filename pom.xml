@@ -10,7 +10,7 @@
 
 	<properties>
 		<jdk.version>1.7</jdk.version>
-		<spring.version>4.1.1.RELEASE</spring.version>
+		<spring.version>3.2.3.RELEASE</spring.version>
 		<junit.version>4.11</junit.version>
 		<logback.version>1.0.13</logback.version>
 		<jcl-over-slf4j.version>1.7.5</jcl-over-slf4j.version>
@@ -91,12 +91,12 @@
 		</dependency>
 
 		<!-- Support for Ehcache and others -->
-		 <dependency>
-         <groupId>org.hibernate</groupId>
-         <artifactId>hibernate-ehcache</artifactId>
-         <version>4.3.8.Final</version>
-       </dependency>
-		
+		<dependency>
+			<groupId>org.hibernate</groupId>
+			<artifactId>hibernate-ehcache</artifactId>
+			<version>4.3.8.Final</version>
+		</dependency>
+
 		<dependency>
 			<groupId>backport-util-concurrent</groupId>
 			<artifactId>backport-util-concurrent</artifactId>
@@ -173,6 +173,10 @@
 				<exclusion>
 					<groupId>org.springframework</groupId>
 					<artifactId>spring-context-support</artifactId>
+				</exclusion>
+				<exclusion>
+					<groupId>org.springframework</groupId>
+					<artifactId>spring-tx</artifactId>
 				</exclusion>
 			</exclusions>
 		</dependency>
