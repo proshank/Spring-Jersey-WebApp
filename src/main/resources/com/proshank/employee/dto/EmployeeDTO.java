@@ -2,6 +2,7 @@ package com.proshank.employee.dto;
 
 import java.io.Serializable;
 
+import javax.persistence.Cacheable;
 import javax.persistence.Column;
 import javax.persistence.Entity;
 import javax.persistence.GeneratedValue;
@@ -14,8 +15,8 @@ import org.hibernate.annotations.CacheConcurrencyStrategy;
 
 @Entity
 @Table(name = "Employees")
-//@Cacheable(true)
-@Cache(usage = CacheConcurrencyStrategy.NONSTRICT_READ_WRITE)
+@Cacheable(true)
+//@Cache(usage = CacheConcurrencyStrategy.NONSTRICT_READ_WRITE)
 public class EmployeeDTO implements Serializable{
 
 	private static final long serialVersionUID = -7165558060671975822L;

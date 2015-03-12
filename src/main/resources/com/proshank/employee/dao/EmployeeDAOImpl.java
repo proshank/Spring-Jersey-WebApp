@@ -2,6 +2,7 @@ package com.proshank.employee.dao;
 
 import java.util.List;
 
+import javax.persistence.Cache;
 import javax.persistence.EntityManager;
 import javax.persistence.PersistenceContext;
 import javax.persistence.Query;
@@ -59,6 +60,11 @@ public class EmployeeDAOImpl implements EmployeeDAO {
 		q.setParameter("employeeName", e.getId());
 		q.setHint("org.hibernate.cacheable", true); 
 		q.setHint("javax.persistence.cache.retrieveMod", "USE");
+		
+		Cache cache = em.getEntityManagerFactory().getCache();
+		if (cache.contains(EmployeeDTO.class, e.getId())) {
+			System.out.println("Cache is cached");  
+		} 
 		return q.getResultList();
 	}
 
