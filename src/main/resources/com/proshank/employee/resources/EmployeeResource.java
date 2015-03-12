@@ -63,7 +63,7 @@ public class EmployeeResource {
 	@Produces(MediaType.APPLICATION_JSON)
 	public List<Employee> employeeSearch(MultivaluedMap<String, String> form) {
 		Employee e1 = new Employee();
-		e1.setCec(form.getFirst("id"));
+		e1.setId(Integer.parseInt(form.getFirst("id")));
 		e1.setFirstName(form.getFirst("name"));
 		List<Employee> elist = employeeService.getEmployee(e1);
  		return elist;

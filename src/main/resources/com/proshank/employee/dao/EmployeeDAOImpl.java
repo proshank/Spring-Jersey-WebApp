@@ -54,9 +54,11 @@ public class EmployeeDAOImpl implements EmployeeDAO {
 
 	@Override
 	public List<EmployeeDTO> getEmplyee(Employee e) {
-		Query q = em.createQuery("from EmployeeDTO e where e.fName = :employeeName");
-		q.setParameter("employeeName", e.getFirstName());
+
+		Query q = em.createQuery("from EmployeeDTO e where e.id = :employeeName");
+		q.setParameter("employeeName", e.getId());
 		q.setHint("org.hibernate.cacheable", true); 
+		q.setHint("javax.persistence.cache.retrieveMod", "USE");
 		return q.getResultList();
 	}
 
